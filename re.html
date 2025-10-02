@@ -1,0 +1,290 @@
+<DOCTYPE html>
+      <html>
+
+      <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+            <title> kg</title>
+      </head>
+      <style>
+
+
+
+            * {
+                  box-sizing: border-box;
+                  margin: 0;
+                  padding: 0;
+            }
+
+            body {
+                  
+                  line-height: 1.6;
+                  font-family: sens-serif;
+                  scroll-behavior: smooth;
+                                    background: #f4f6f9;
+
+            }
+
+            header {
+                  background: rgb(4, 99, 4);
+                  color: rgb(232, 238, 234);
+position: sticky;
+      top:0px;
+      z-index:1000;
+font-size: 1.5rem;
+text-align:center;
+
+      
+            }
+
+.nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+	background:black;
+margin-top:10px;
+gap:10%;
+}
+.nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+
+
+}
+
+.nav a:hover{
+
+color:green;
+transform:translatey(-3px);
+transition:all 0.3s ease;}
+
+.main{
+font-size:1.3rem;
+margin:auto;
+padding:20px;
+max-width:1200px;
+}
+h2{color:green;
+margin:30px;
+text-align:center;}
+.skills ul{
+
+display:flex;
+list-style:none;
+gap:10%;
+
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+ul li{
+box-shadow:0px 3px 8px #bbb;
+background:white;
+padding:10px 15px;
+border-radius:10px;
+min-width:120px;
+text-align:center;}
+ul li:hover{
+filter: brightness(120%) contrast(150%) saturate(180%);
+
+font-weight:bold;
+transform:translatey(-3px);
+transition:all 0.3s ease;
+box-shadow:0px 3px 8px black;
+
+}
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;
+
+}.ba{
+
+background:white;
+border-radius:10px;
+padding:15px 20px;
+text-align:center;
+box-shadow:0px 3px 8px #bbb;
+
+}
+ .ba:hover{
+filter:grayscale(30%) brightness(120%) contrast(140%) saturate(130%);
+
+
+font-weight:bold;
+transform:translatey(-3px);
+transition:all 0.3s ease;
+box-shadow:0px 3px 8px black;
+}
+h3{color:green;}
+.form{
+text-align:center;}
+.post input,textarea{
+
+background:white;
+border-radius:10px;
+width:100%;
+border:1px solid black;
+padding:20px;
+margin:10px;
+box-shadow:0px 3px 8px #bbb;
+}button{
+margin-top:10px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            
+
+}
+button:hover{
+box-shadow:0px 3px 8px black;
+border:2px solid black;
+font-weight:bold;
+            transition: all 0.3s ease;
+
+}
+
+footer{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:black;
+font-size:1.2rem;
+color:white;
+height:8%;
+
+}
+
+@media (max-width: 768px){      nav {
+        flex-direction: column;
+        gap:10px;
+      }
+
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .ba{
+        width: 90%;
+      }
+
+      .skills li {
+        width: 45%;
+        margin: 10px auto;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+      </style>
+
+
+      <body>
+            <header>
+                  <div class="div">
+                        <h1>Gulshan kumar</h1>
+                        <p>Web Developer | Freelancer | Learner</p>
+                  </div>
+                  <nav class="nav">
+
+                        <a href="#">About</a>
+                        <a href="#">Skills</a>
+                        <a href="#">Projects</a>
+                        <a href="#">contact</a>
+
+                  </nav>
+
+
+
+            </header>
+            <main class="main">
+                  <section class="about">
+                        <h2>About Me</h2>
+                        <p>Hello! I am Gulshan Kumar, a passionate web developer. I create simple and beautiful websites
+                              using<mark> Html, Css,JavaScript and Responsive design</mark> My goal is to help clients
+                              bring their ideas to life online.
+                        </p>
+                  </section>
+                  <section class="skills">
+                        <h2>Skills</h2>
+                        <ul>
+                              <li>Css</li>
+                              <li>Html</li>
+                              <li>Js</li>
+                              <li>Responsive</li>
+                        </ul>
+                  </section>
+                                    <h2>Projects</h2>
+
+
+                  <section class="projects">
+
+
+                        <div class="ba">
+                              <h3>Landing page
+                              </h3>
+                              <p>A responsive landing page for a local business.
+
+ </p>
+                        </div>
+
+
+                        <div class="ba">
+                              <h3>
+                                    Personal portfolio
+                              </h3>
+                              <p> A personal portfolio website showcasing skills and projects.</p>
+
+</p>
+                        </div>
+
+                        <div class="ba">
+                              <h3>
+                                    Blog website
+                              </h3>
+                              <p>A static blog layout with multiple posts and categories.
+
+</p>
+                        </div>
+                  </section>
+
+
+<section class="form">
+<h2>Contact me</h2>
+	<form class="post">
+
+<div><input type="text" id="name" name"name" placeholder="Enter your name" required></div>
+
+<div><input type="text" id="Email" name"Email" placeholder="Enter your Email" required></div>
+
+<textarea id="message" placeholder="Your message"> </textarea>
+
+                <button type="submit">Send Message</button>
+
+
+</form>
+</section>
+
+       </main>
+<footer>
+    <p>&copy; 2025 Gulshan Kumar | All Rights Reserved</p>
+
+</footer>
+      </body>
+      <html>
