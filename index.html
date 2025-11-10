@@ -1,242 +1,104 @@
-<DOCTYPE html>
-      <html>
+<!doctype html>
+<html lang="hi">
 
-      <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kg</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
 
 
-            <title> kg</title>
-      </head>
-      <style>
+    body {
 
 
+      background: #f4f6f9;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
 
-            * {
-                  box-sizing: border-box;
-                  margin: 0;
-                  padding: 0;
-            }
 
-            body {
-                  
-                  line-height: 1.6;
-                  font-family: sens-serif;
-                  scroll-behavior: smooth;
-                                    background: #f4f6f9;
 
-            }
+    }
 
-            header {
-                  background: rgb(4, 99, 4);
-                  color: rgb(232, 238, 234);
-position: sticky;
-      top:0px;
-      z-index:1000;
-font-size: 1.5rem;
-text-align:center;
+    header {
+      position: sticky;
+      top: 0px;
+      z-index: 1000;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
 
-      
-            }
+    }
 
-.nav{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-	background:black;
-margin-top:10px;
-gap:10%;
-}
-.nav a{
-text-decoration:none;
-color:white;
-font-weight:bold;
+    .logo {
+      display: flex;
 
+      margin-left: 10%;
+      gap: 15px;
 
-}
+    }
 
-.nav a:hover{
+    .logo1 {
+      background-color: rgb(2, 144, 103);
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+    }
 
-color:green;
-transform:translatey(-3px);
-transition:all 0.3s ease;}
+    .logo2 {
 
-.main{
-font-size:1.3rem;
-margin:auto;
-padding:20px;
-max-width:1200px;
-}
-h2{color:green;
-margin:30px;
-text-align:center;}
-.skills ul{
+      padding: 10px;
+      font-weight: bold;
+    }
 
-display:flex;
-list-style:none;
-gap:10%;
+    .nav {
 
-justify-content:center;
-flex-wrap:wrap;
+      margin-right: 10%;
 
-}
-
-
-.nav a{
+    }
 
-      animation: kg 1s ease 2s infinite alternate-reverse;
+    header .nav a {
 
-}
+      text-decoration: none;
+      font-size: 1rem;
+      color: #4f4f50;
+      margin: 7px;
+      padding: 10px;
 
 
-@keyframes kg{
+    }
 
-from{
-transform:translatey(10px);
+    header .nav a:hover {
 
+      background: #f4f6f9;
+      color: black;
+      border-radius: 8px;
 
-      to{
-
+    }
 
-      }
-}
-
-
-
-}
-
-ul li{
-box-shadow:0px 3px 8px #bbb;
-background:white;
-padding:10px 15px;
-border-radius:10px;
-min-width:120px;
-text-align:center;}
-ul li:hover{
-filter: brightness(120%) contrast(150%) saturate(180%);
+    .main {
 
-font-weight:bold;
-transform:translatey(-3px);
-transition:all 0.3s ease;
-box-shadow:0px 3px 8px black;
+      padding: 10px;
+      margin: auto;
+      margin-top: 70px;
+      max-width: 1000px;
+    }
 
-}
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;
+    .main .bb h1 {
 
-}.ba{
-
-background:white;
-border-radius:10px;
-padding:15px 20px;
-text-align:center;
-box-shadow:0px 3px 8px #bbb;
-
-}
- .ba:hover{
-filter:grayscale(30%) brightness(120%) contrast(140%) saturate(130%);
-
-
-font-weight:bold;
-transform:translatey(-3px);
-transition:all 0.3s ease;
-box-shadow:0px 3px 8px black;
-}
-h3{color:green;}
-.Contact{
-text-align:center;}
-.post input{
-
-background:white;
-border-radius:10px;
-width:60%;
-border:1px solid black;
-padding:20px;
-margin:10px;
-box-shadow:0px 3px 8px #bbb;
-}button{
-margin-top:10px;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: green;
-            color: #fff;
-            cursor: pointer;
-            font-size: 1rem;
-            
-
-}
-.post textarea{
-background:white;
-border-radius:10px;
-width:60%;
-border:1px solid black;
-
-margin:10px;
-box-shadow:0px 3px 8px #bbb;
-
-padding:30px;}
-button:hover{
-box-shadow:0px 3px 8px black;
-border:2px solid black;
-font-weight:bold;
-            transition: all 0.3s ease;
-
-}
-
-footer{
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-background:black;
-font-size:1.2rem;
-color:white;
-height:8%;
-}
-
-
-@keyframes km{
-
-
-
-      from{
-transform: translateX(300vh);
-
-      }
-
-      to{
-
-
-
-      }
-}
-
-
-
-
-
-
-
-@media (max-width: 768px){      nav {
-        flex-direction: column;
-        gap:10px;
-      }
-
-      .projects {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .ba{
-        width: 90%;
-      }
-
-      .skills li {
-        width: 45%;
-        margin: 10px auto;
-      }
+      font-weight: bold;
+      font-size: 40px;
+      margin-bottom: 5px;
     }
 
 
@@ -245,106 +107,598 @@ transform: translateX(300vh);
 
 
 
+    .bb p {
+      color: #545555;
+      font-size: 1rem;
+
+    }
+
+    .nav {
+
+      display: flex;
+    }
+
+    .bb .but1 {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: white;
+      background-color: rgb(7, 186, 141);
+      padding: 15px;
+      border-radius: 10px;
+      margin-right: 15px;
+      border: 1px solid rgb(5, 160, 116);
+    }
+
+    .bb .but2 {
+      margin-top: 20px;
+
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: rgb(4, 104, 67);
+
+      padding: 15px;
+      border-radius: 10px;
+
+      border: 2px solid rgb(5, 160, 116);
+    }
+
+    .bb3 {
+
+      background-color: white;
+      border: #4f4f50;
+      border-radius: 10px;
+      height: 250px;
+      width: 300px;
+      box-shadow: 0px 3px 8px #bbb;
+
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .bb3 img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      margin: 20px;
+
+
+    }
+
+    .bb3 img:hover {
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
 
 
 
-      </style>
+    .bb3 b {
+      display: inline-block;
+      margin-top: 10px;
+
+    }
+
+    section {
 
 
-      <body>
-            <header>
-                  <div class="div">
-                        <h1>Gulshan kumar</h1>
-                        <p>Web Developer | Freelancer | Learner</p>
-                  </div>
-                  <nav class="nav">
+      text-align: center;
+    }
 
-                        <a href="About">About</a>
-                        <a href="Skills">Skills</a>
-                        <a href="Projects">Projects</a>
-                        <a href="contact">contact</a>
+    .bt {
+      display: flex;
+      gap: 50px;
 
-                  </nav>
+    }
 
+    h2 {
 
-
-            </header>
-            <main class="main">
-                  <section class="about" id="About">
-                        <h2>About Me</h2>
-                        <p>Hello! I am Gulshan Kumar, a passionate web developer. I create simple and beautiful websites
-                              using<mark> Html, Css,JavaScript and Responsive design</mark> My goal is to help clients
-                              bring their ideas to life online.
-                        </p>
-                  </section>
-                  <section class="skills" id="Skills">
-                        <h2>Skills</h2>
-                        <ul>
-                              <li>Css</li>
-                              <li>Html</li>
-                              <li>Js</li>
-                              <li>Responsive</li>
-                        </ul>
-                  </section>
-                                    <h2>Projects</h2>
-
-
-                  <section class="projects" id="Projects">
-
-
-                        <div class="ba">
-                              <h3>Landing page
-                              </h3>
-                              <p>A responsive landing page for a local business.
-
- </p>
-                        </div>
-
-
-                        <div class="ba">
-                              <h3>
-                                    Personal portfolio
-                              </h3>
-                              <p> A personal portfolio website showcasing skills and projects.</p>
-
-</p>
-                        </div>
-
-                        <div class="ba">
-                              <h3>
-                                    Blog website
-                              </h3>
-                              <p>A static blog layout with multiple posts and categories.
-
-</p>
-                        </div>
-                  </section>
-
-
-<section class="Contact" id="Contact">
-<h2>Contact me</h2>
-	<form class="post">
-
-<div><input type="text" id="name" name"name" placeholder="Enter your name" required></div>
-
-<div><input type="text" id="Email" name"Email" placeholder="Enter your Email" required></div>
-
-<textarea id="message" placeholder="Your message"> </textarea>
-
-               <br> <button type="submit">Send Message</button>
-
-
-</form>
-</section>
-
-       </main>
-<footer>
-    <p>&copy; 2025 Gulshan Kumar | All Rights Reserved</p>
-
-</footer>
+      color: rgb(4, 135, 91);
+      text-align: center;
+      padding: 10px;
+      margin: 30px
+    }
 
 
 
+    .skills ul {
+      text-align: center;
 
-      </body>
-      <html>
+      list-style: none;
+      display: flex;
+      gap: 45px;
+      justify-content: center;
+    }
+
+
+
+    .skills ul li {
+
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 8px #bbb;
+    }
+
+    .skills li:hover {
+      box-shadow: 0px 3px 8px rgb(44, 44, 44);
+
+      transform: translateY(3px);
+      transition: all 0.3s ease;
+    }
+
+    .Projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+
+      gap: 15px;
+
+    }
+
+    .ba {
+      background-color: white;
+      color: black;
+
+      border-radius: 10px;
+      padding: 15px 20px;
+      text-align: center;
+      box-shadow: 0px 3px 8px #bbb;
+      margin: 20px;
+    }
+
+    h3 {
+      padding: 10px;
+
+      color: rgb(4, 135, 91);
+
+    }
+
+    .Projects a {
+
+      color: #4f4f50;
+      text-decoration: none;
+    }
+
+    .Projects .ba:nth-child(2) a {
+      display: inline-block;
+      margin-top: 20px;
+
+    }
+    .ba:hover {
+
+      box-shadow: 0px 3px 8px rgb(44, 44, 44);
+
+      transform: translatey(-10px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .Projects .ba:nth-child(3) a {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .form input
+     {
+      width: 40%;
+      padding: 15px;
+      margin:5px ;
+      border-radius: 6px;
+      background-color: white;
+      border: 1px solid #121213;
+      box-shadow: 0px 3px 8px #bbb;
+
+    }
+   .form textarea{
+      background-color: white;
+      box-shadow: 0px 3px 8px #bbb;
+
+margin:5px;
+width:82%;
+padding:30px ;
+border-radius:6px ;
+   }
+    .form .t {
+      display: flex;
+      justify-content: flex-start;
+
+      background-color: rgb(2, 144, 103);
+      border: rgb(2, 144, 103);
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      border-radius: 10px;
+      margin-left: 30px;
+      animation: kg 1s ease infinite alternate;
+    }
+
+
+
+
+    @keyframes kg {
+
+
+      form {
+
+        transform: translateY(0px);
+
+
+
+      }
+
+      to {
+
+
+        transform: translatey(3px);
+
+
+      }
+    }
+
+    .Projects {
+
+      text-align: center;
+    }
+
+    footer {
+      background-color: white;
+      color: #121213;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      ;
+    }
+
+    .form {
+      margin-bottom: 40px;
+      background-color: white;
+      padding: 20px 10px;
+      border-radius: 10px;
+      box-shadow: 0px 3px 8px #bbb;
+
+    }
+
+    .t:hover {
+      background-color: #f4f6f9;
+      color: rgb(8, 143, 80);
+      border: 2px solid rgb(8, 143, 80);
+    }
+
+    .ba img {
+      height: 180px;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .resume {
+      background-color: white;
+      line-height: 2;
+      border-radius: 10px;
+      padding: 20px 10px;
+      display: flex;
+      font-size: 1.1rem;
+      justify-content: center;
+      text-align: center;
+
+      box-shadow: 0px 3px 8px #bbb;
+    }
+
+    .resume1 p:nth-child(1) {
+
+      padding-right: 48vw;
+
+
+
+    }
+
+    .resume1 p:nth-child(2) {
+
+      padding-right: 45vw;
+
+
+
+    }
+
+    .resume1 p:nth-child(3) {
+
+      padding-right: 41vw;
+
+
+
+    }
+
+
+
+    @media (max-width:720px) {
+      .bb {
+
+        margin-left: 30px;
+
+      }
+
+      .bt {
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+      }
+
+      .logo {
+
+        margin: 0px;
+
+      }
+
+      .nav {
+
+        flex-direction: column;
+        align-items: center;
+        margin: 0px;
+      }
+
+      .nav a {
+
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .Projects {
+        grid-template-columns: 1fr;
+
+      }
+
+      .bb3 {
+        width: 220px;
+        margin: auto;
+        margin-bottom: 50px;
+      }
+
+      .bb3 img {
+
+        width: 170px;
+      }
+
+      .form input
+       {
+        width: 90%;
+      }
+.form
+      textarea {
+        width: 90%;
+      }
+
+      .skills ul {
+        flex-wrap: wrap;
+      }
+
+      footer {
+        padding: 20px;
+      }
+
+      .about p {
+        margin: 10px;
+      }
+
+      .resume {
+
+        font-size: 1rem;
+
+      }
+
+
+      .resume1 p:nth-child(1) {
+
+        padding-right: 26vw;
+
+
+
+      }
+
+      .resume1 p:nth-child(2) {
+
+        padding-right: 15vw;
+
+
+
+      }
+
+      .resume1 p:nth-child(3) {
+
+        padding-right: 21vw;
+
+
+
+      }
+
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo1">
+
+        Kg
+      </div>
+
+      <div class="logo2">
+
+        Gulshan kumar
+      </div>
+
+    </div>
+    <nav class="nav">
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+
+
+    </nav>
+
+
+  </header>
+  <main class="main">
+
+    <div class="bt">
+
+
+
+      <div class="bb">
+        <h1>I build clean, responsive websites
+        </h1>
+        <p>Frontend developer focused on HTML & CSS. I create minimal, fast and accessible<br> user interfaces that help
+          businesses grow.
+
+        </p>
+
+
+
+        <button class="but1">Hire Me</button>
+
+
+
+        <button class="but2">See Projects</button>
+      </div>
+
+      <div class="bb3">
+
+        <img src="kg.jpeg">
+        <b>Frontend • HTML • CSS • Responsive
+        </b>
+      </div>
+
+    </div>
+    <section class="random">
+
+      <section class="about" id="about">
+        <h2>
+          About Me
+
+        </h2>
+        <p>Hi — I'm Gulshan. I turn ideas into websites. I enjoy building usable products with clean code and simple
+          design.
+
+        </p>
+      </section>
+
+      <section class="skills">
+
+        <h2>Skills</h2>
+
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Responsive design</li>
+        </ul>
+
+      </section>
+      <h2>Projects</h2>
+
+      <section class="Projects">
+
+        <div class="ba">
+          <img src="portfolio.png">
+
+
+          <h3>Portfolio Website
+          </h3>
+
+          <p>A responsive one-page portfolio showcasing projects and contact form.
+
+          </p>
+          <a target="_blank" href=""> <b>View demo</b></a>
+        </div>
+        <div class="ba">
+          <img src="business.png">
+          <h3>Business Landing Page
+          </h3>
+          <p>Modern landing page for local businesses with contact CTA.
+
+          </p>
+          <a target="_blank" href="file:///C:/Users/Gulshan%20Kumar/OneDrive/Desktop/fame/index.html"> <b>View
+              demo</b></a>
+
+        </div>
+        <div class="ba">
+          <img src="landing.png">
+
+          <h3>
+
+            Blog Layout (UI)
+          </h3>
+          <p>Readable blog UI with cards, sidebar and responsive grid.
+
+          </p>
+          <a target="_blank" href=""> <b>View demo</b></a>
+
+        </div>
+
+      </section>
+      <h2>Resume</h2>
+
+      <section class="resume">
+
+        <div class="resume1">
+
+          <P>
+            <b> Education:</b> Diploma in IT
+
+
+          </P>
+
+
+          <p>
+            <b> Skills:</b> HTML, CSS, Responsive
+
+
+          </p>
+
+          <p>
+            <b>Experience:</b> Freelance Web Developer
+          </p>
+        </div>
+      </section>
+
+      <section class="Contact">
+        <h2>Contact Me</h2>
+        <form class="form" onsubmit="return false">
+          <input type="text" placeholder="Your name" required>
+          <input type="text" placeholder="Your E-mail" required><br>
+          <textarea name="comments" placeholder="Your message"></textarea>
+
+          <br><button class="t">Send message</button>
+
+        </form>
+
+      </section>
+
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 • Gulshan Kumar — Built with HTML & CSS</p>
+
+  </footer>
+
+<script>
+
+
+
+alert("WELCOME MY PORTFOLIO WEBSITE")
+
+</script>
+
+</body>
+
+</html>
