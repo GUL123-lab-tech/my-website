@@ -621,7 +621,7 @@ section {
 
 
 
-/* ===== Hamburger ===== */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -842,7 +842,10 @@ section {
 
           <input type="text" name="name" placeholder="Your name" required>
           <input type="text" name="email"  placeholder="Your E-mail" required><br>
+      
           <textarea name="comments" placeholder="Your message" required></textarea>
+          <input type="hidden" name="localtime" id="localtime">
+
   <input type="hidden" name="_subject" value="New Portfolio Message">
   <input type="text" name="_gotcha" style="display:none">
 
@@ -870,7 +873,6 @@ section {
     <p>© 2025 • Gulshan Kumar — Built with HTML & CSS</p>
 
   </footer>
-<input type="hidden" name="localtime" id="localtime">
 
 <script>
 
@@ -953,10 +955,11 @@ async function handleSubmit(event) {
 
   const form = event.target;
   const alertBox = document.getElementById("customAlert");
+  document.getElementById('localtime').value = new Date().toLocaleString();
 
-  // ✅ HTML5 validation check
+  
   if (!form.checkValidity()) {
-    form.reportValidity(); // browser error message show karega
+    form.reportValidity(); 
     return;
   }
 
@@ -984,7 +987,6 @@ async function handleSubmit(event) {
 
 
 
-document.getElementById('localtime').value = new Date().toLocaleString();
 
 
 </script>
