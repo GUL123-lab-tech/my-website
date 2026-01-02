@@ -870,6 +870,7 @@ section {
     <p>© 2025 • Gulshan Kumar — Built with HTML & CSS</p>
 
   </footer>
+<input type="hidden" name="localtime" id="localtime">
 
 <script>
 
@@ -983,6 +984,7 @@ async function handleSubmit(event) {
 
 
 
+document.getElementById('localtime').value = new Date().toLocaleString();
 
 
 </script>
