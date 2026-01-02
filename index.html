@@ -11,6 +11,9 @@
       padding: 0;
       margin: 0;
     }
+:root {
+  --header-height: 80px;
+}
 
 
     body {
@@ -25,7 +28,8 @@
 
     }
 
-    header {
+    header{
+  height: var(--header-height);
       position: sticky;
       top: 0px;
       z-index: 1000;
@@ -119,6 +123,7 @@
     }
 
     .bb .but1 {
+      text-decoration:none;
       margin-top: 20px;
       font-weight: bold;
       font-size: 1.1rem;
@@ -132,6 +137,7 @@
 
     .bb .but2 {
       margin-top: 20px;
+      text-decoration:none;
 
       font-weight: bold;
       font-size: 1.1rem;
@@ -384,6 +390,14 @@ border-radius:6px ;
       text-align: center;
 
       box-shadow: 0px 3px 8px #bbb;
+    }.resume:hover{
+
+box-shadow: 0px 3px 8px rgb(44, 44, 44);
+
+      transform: translatey(-10px);
+      transition: all 0.3s ease-in-out;
+
+
     }
 
     .resume1 p:nth-child(1) {
@@ -411,13 +425,23 @@ border-radius:6px ;
     }
 
 
+.ct{
 
+margin-top:40px;
+
+}
     @media (max-width:720px) {
       .bb {
 
-        margin-left: 30px;
+        margin-left: 30px;}
 
-      }
+          :root {
+    --header-height: 220px;
+  }
+
+    
+
+
 
       .bt {
 
@@ -514,6 +538,135 @@ border-radius:6px ;
       }
 
     }
+
+
+    
+#customAlert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.project-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+.project-card.hide {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+
+.bt{
+  animation: fadeUp 0.8s ease;
+}
+header{animation: fadeUp 0.8s ease;}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav a.active {
+  color: rgb(2,144,103);
+  font-weight: bold;
+}
+
+.alert-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+  animation: popup 0.4s ease;
+}
+
+.alert-box h3 {
+  color: rgb(2, 144, 103);
+  margin-bottom: 10px;
+}
+
+.alert-box p {
+  color: #333;
+  font-size: 1rem;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-right: 10%;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* ===== Mobile Nav ===== */
+@media (max-width: 720px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+
   </style>
 
 
@@ -522,30 +675,34 @@ border-radius:6px ;
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <div class="logo1">
-
-        Kg
-      </div>
-
-      <div class="logo2">
-
-        Gulshan kumar
-      </div>
-
-    </div>
-    <nav class="nav">
-      <a href="#">About</a>
-      <a href="#">Skills</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
 
 
-    </nav>
+  
+<header>
+  <div class="logo">
+    <div class="logo1">Kg</div>
+    <div class="logo2">Gulshan kumar</div>
+  </div>
+
+  <nav class="nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+</header>
 
 
-  </header>
+
+
+
   <main class="main">
 
     <div class="bt">
@@ -560,13 +717,11 @@ border-radius:6px ;
 
         </p>
 
-
-
-        <button class="but1">Hire Me</button>
-
-
-
-        <button class="but2">See Projects</button>
+<div class="ct">
+<a href="#contact" class="but1">Hire Me</a>
+<a href="#projects" class="but2">See Projects</a>
+</div>
+        
       </div>
 
       <div class="bb3">
@@ -590,22 +745,25 @@ border-radius:6px ;
         </p>
       </section>
 
-      <section class="skills">
+      <section class="skills" id="skills">
+
 
         <h2>Skills</h2>
 
         <ul>
           <li>HTML</li>
           <li>CSS</li>
+          <li>Java script</li>
           <li>Responsive design</li>
         </ul>
 
       </section>
       <h2>Projects</h2>
 
-      <section class="Projects">
+      <section class="Projects" id="projects">
 
-        <div class="ba">
+
+        <div class="ba project-card">
           <img src="portfolio.png">
 
 
@@ -617,7 +775,8 @@ border-radius:6px ;
           </p>
           <a target="_blank" href=""> <b>View demo</b></a>
         </div>
-        <div class="ba">
+                <div class="ba project-card">
+
           <img src="business.png">
           <h3>Business Landing Page
           </h3>
@@ -628,8 +787,10 @@ border-radius:6px ;
               demo</b></a>
 
         </div>
-        <div class="ba">
-          <img src="landing.png">
+                <div class="ba project-card">
+
+                    <img src="blog.png">
+
 
           <h3>
 
@@ -657,7 +818,9 @@ border-radius:6px ;
 
 
           <p>
-            <b> Skills:</b> HTML, CSS, Responsive
+            <b> Skills:</b> HTML, CSS,Responsive
+
+
 
 
           </p>
@@ -668,16 +831,33 @@ border-radius:6px ;
         </div>
       </section>
 
-      <section class="Contact">
+      <section class="Contact" id="contact">
+
         <h2>Contact Me</h2>
-        <form class="form" onsubmit="return false">
+        <form class="form"
+      action="https://formspree.io/f/xwvporbo"
+      method="POST"
+      onsubmit="handleSubmit(event)">
+
+
           <input type="text" placeholder="Your name" required>
           <input type="text" placeholder="Your E-mail" required><br>
-          <textarea name="comments" placeholder="Your message"></textarea>
+          <textarea name="comments" placeholder="Your message" required></textarea>
+  <input type="hidden" name="_subject" value="New Portfolio Message">
+  <input type="text" name="_gotcha" style="display:none">
 
           <br><button class="t">Send message</button>
 
+
+</p>
+
         </form>
+<div id="customAlert">
+  <div class="alert-box">
+    <h3>✅ Success</h3>
+    <p>Your information has been saved in KG’s system.</p>
+  </div>
+</div>
 
       </section>
 
@@ -694,10 +874,119 @@ border-radius:6px ;
 <script>
 
 
+  function submitForm(event) {
+    event.preventDefault(); 
 
-alert("WELCOME MY PORTFOLIO WEBSITE")
+    const alertBox = document.getElementById("customAlert");
+
+    
+    alertBox.style.display = "flex";
+
+    
+    event.target.reset();
+
+    
+    setTimeout(() => {
+      alertBox.style.display = "none";
+    }, 3000);
+  }
+
+  const projectSection = document.getElementById("projects");
+  const cards = document.querySelectorAll(".project-card");
+
+  let intervalId = null;
+
+  const observer = new IntersectionObserver(
+    entries => {
+      if (entries[0].isIntersecting) {
+        if (!intervalId) startLoop();
+      } else {
+        stopLoop();
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(projectSection);
+
+  function startLoop() {
+    runSequence();
+    intervalId = setInterval(runSequence, 10000); // 🔁 every 10 sec
+  }
+
+  function stopLoop() {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  function runSequence() {
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("hide");
+
+        setTimeout(() => {
+          card.classList.remove("hide");
+        }, 500);
+
+      }, index * 1000);
+    });
+  }
+
+
+
+function toggleMenu() {
+    document.querySelector(".nav").classList.toggle("active");
+  }
+
+  // link click pe menu close
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.querySelector(".nav").classList.remove("active");
+    });
+  });
+
+
+
+async function handleSubmit(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const alertBox = document.getElementById("customAlert");
+
+  // ✅ HTML5 validation check
+  if (!form.checkValidity()) {
+    form.reportValidity(); // browser error message show karega
+    return;
+  }
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      alertBox.style.display = "flex";
+      form.reset();
+
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 3000);
+    } else {
+      alert("Failed to send message.");
+    }
+  } catch (err) {
+    alert("Network error. Try again later.");
+  }
+}
+
+
+
+
 
 </script>
+
 
 </body>
 
