@@ -59,6 +59,82 @@
     /* Animations */
     @keyframes fadeInDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
     @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+    /* =====================
+RESPONSIVE DESIGN
+===================== */
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+
+nav {
+flex-direction: column;
+gap: 15px;
+}
+
+nav ul {
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+
+.hero {
+height: auto;
+padding: 100px 20px;
+}
+
+.hero h2 {
+font-size: 2.1rem;
+}
+
+.hero p {
+font-size: 1rem;
+}
+
+section {
+padding: 60px 15px;
+}
+
+section h2 {
+font-size: 1.7rem;
+}
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+nav h1 {
+font-size: 1.4rem;
+}
+
+nav ul {
+flex-direction: column;
+gap: 10px;
+}
+
+.hero h2 {
+font-size: 1.8rem;
+}
+
+.hero p {
+font-size: 0.95rem;
+}
+
+.btn {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+.card {
+padding: 20px;
+}
+
+footer {
+font-size: 0.9rem;
+}
+}
+
   </style>
 </head>
 <body>
