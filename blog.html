@@ -57,6 +57,8 @@ nav h1{
 nav ul{
   list-style:none;
   display:flex;
+
+  
   gap:22px;
 }
 aside{
@@ -208,6 +210,19 @@ aside{
   box-shadow:0 10px 25px rgba(0,0,0,0.5);
   height:fit-content;
 }
+#menu{
+  display: none;
+}.humberger{
+display:none ;
+flex-direction: column;
+cursor: pointer;
+gap:5px;
+}
+.humberger span{
+height:3px ;
+width: 25px;
+background-color: white;
+}
 
 aside h4{
   margin-bottom:15px;
@@ -259,6 +274,22 @@ footer{
   .main{
     grid-template-columns:1fr;
   }
+
+
+  .humberger{
+
+
+    display: flex;
+  }nav ul{
+
+    display:none;
+flex-direction: column;
+
+  }
+#menu:checked ~ nav ul{
+display: flex;
+}
+
 }
 
 @media(max-width:600px){
@@ -276,8 +307,16 @@ footer{
 
 <header>
   <div class="container">
+              <h1>DarkBlog</h1>
+
+<input type="checkbox" id="menu">
+<label for="menu" class="humberger"><span></span>
+  <span></span>
+  <span></span></label>
+          
+
+
     <nav>
-      <h1>DarkBlog</h1>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Articles</a></li>
