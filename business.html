@@ -47,6 +47,22 @@
     .testimonial p{margin-bottom:10px;font-size:1.1rem}
     .testimonial span{font-weight:600;color:#2b8a3e}
 
+    
+#menu{
+
+  display:none ;
+}
+.humberger{
+  display: none;
+cursor: pointer;
+flex-direction: column;
+gap:5px;
+}.humberger span{
+width: 30px;
+background-color:white;
+height:3px;
+
+}
     /* Contact */
     form{max-width:600px;margin:auto}
     form input,form textarea{width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;border-radius:6px;font-size:1rem}
@@ -66,17 +82,35 @@ RESPONSIVE DESIGN
 
 /* Tablet & Mobile */
 @media (max-width: 768px) {
-
+  
 nav {
-flex-direction: column;
-gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.humberger {
+  display: flex;
 }
 
 nav ul {
-flex-wrap: wrap;
-justify-content: center;
-gap: 15px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #2b8a3e;
+  flex-direction: column;
+  display: none;
+  text-align: center;
+  padding: 10px 0;
 }
+
+/* MAGIC PART */
+
+#menu:checked ~ nav ul {
+  display: flex;
+}
+
 
 .hero {
 height: auto;
@@ -141,8 +175,16 @@ font-size: 0.9rem;
   <!-- Header -->
   <header>
     <div class="container">
-      <nav>
         <h1>BizGrow</h1>
+      <input type="checkbox" id="menu">
+      <label for="menu" class="humberger">
+        <span></span>
+      <span></span>
+      <span></span>
+      </label>
+
+
+      <nav>
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
