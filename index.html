@@ -168,6 +168,9 @@ transition: all 0.2s ease;
       margin: 20px;
     }
 
+
+
+
     .bb3 b {
       display: inline-block;
       margin-top: 10px;
@@ -346,6 +349,9 @@ transition: all 0.2s ease;
       margin-top: 40px;
     }
 .demo-btn {
+
+display: inline-block;
+  margin-top: 20px;
       text-decoration: none;
       font-weight: bold;
     }
@@ -631,6 +637,8 @@ transition: all 0.2s ease;
           <li>HTML5 </li>
           <li>CSS3</li>
           <li>Responsive </li>
+                    <li>Basic js</li>
+
           <li>Basic Git and Github</li>
           <li>Contact Form Integration</li>
         </ul>
@@ -679,6 +687,28 @@ transition: all 0.2s ease;
             Demo →</a></b>
         
         </div>
+
+
+                  <div class="ba project-card">
+
+          <img src="net.png">
+          <h3>Netflix clone
+
+          </h3>
+          <p>
+
+Created a responsive Netflix clone using HTML and CSS with modern UI and clean layout.
+
+
+
+          </p>
+          <b>
+            
+          <a target="_blank" href= "https://gul123-lab-tech.github.io/my-website/netflix.html"class="demo-btn">View
+            Demo →</a></b>
+        
+        </div>
+
       </section>
       <h2>Resume</h2>
       <section class="resume">
@@ -697,16 +727,25 @@ transition: all 0.2s ease;
       <section class="Contact" id="contact">
         <h2>Contact Me</h2>
         <form class="form" action="https://formspree.io/f/xwvporbo" method="POST" onsubmit="handleSubmit(event)">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="_replyto" placeholder="Your E-mail" required>
-          <br>
-          <textarea name="comments" placeholder="Your message" required></textarea>
-          <input type="hidden" name="localtime" id="localtime">
-          <input type="hidden" name="_subject" value="New Portfolio Message">
-          <input type="text" name="_gotcha" style="display:none">
-          <br><button class="t">Send message</button>
-          </p>
-        </form>
+    
+    <input type="text" name="name" placeholder="Your name" required>
+    
+    <input type="email" name="email" placeholder="Your E-mail" required>
+    
+    <br>
+    
+    <textarea name="message" placeholder="Your message" required></textarea>
+    
+    <input type="hidden" name="localtime" id="localtime">
+    
+    <input type="hidden" name="_subject" value="New Portfolio Message">
+    
+    <input type="text" name="_gotcha" style="display:none">
+    
+    <br>
+    
+    <button class="t">Send message</button>
+</form>
         <div id="customAlert">
           <div class="alert-box">
             <h3>✅ Success</h3>
@@ -721,102 +760,102 @@ transition: all 0.2s ease;
     <p>
       <a href="https://github.com/gul123-lab-tech" target="_blank">GitHub</a>
 
-      <a href="https://linkedin.com/in/yourname">LinkedIn</a>
+      <a href=https://www.linkedin.com/in/gulshan-kumar-8888043b5?utm_source=share_via&utm_content=profile&utm_medium=member_android>LinkedIn</a>
     </p>
   </footer>
   <script>
-    async function handleSubmit(event) {
-      event.preventDefault();
+    
 
-      const alertBox = document.getElementById("customAlert");
-      alertBox.style.display = "flex";
-      event.target.reset();
-      setTimeout(() => {
-        alertBox.style.display = "none";
-      }, 3000);
-    }
+  const projectSection = document.getElementById("projects");
+  const cards = document.querySelectorAll(".project-card");
 
-    const projectSection = document.getElementById("projects");
-    const cards = document.querySelectorAll(".project-card");
+  let intervalId = null;
 
-    let intervalId = null;
-
-    const observer = new IntersectionObserver(
-      entries => {
-        if (entries[0].isIntersecting) {
-          if (!intervalId) startLoop();
-        } else {
-          stopLoop();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(projectSection);
-
-    function startLoop() {
-      runSequence();
-      intervalId = setInterval(runSequence, 10000);
-    }
-
-    function stopLoop() {
-      clearInterval(intervalId);
-      intervalId = null;
-    }
-
-    function runSequence() {
-      cards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("hide");
-
-          setTimeout(() => {
-            card.classList.remove("hide");
-          }, 500);
-
-        }, index * 1000);
-      });
-    }
-    function toggleMenu() {
-      document.querySelector(".nav").classList.toggle("active");
-    }
-
-    document.querySelectorAll(".nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.querySelector(".nav").classList.remove("active");
-      });
-    });
-
-
-    async function handleSubmit(event) {
-      event.preventDefault();
-
-      const form = event.target;
-      const alertBox = document.getElementById("customAlert");
-
-
-      alertBox.style.display = "flex";
-
-      document.getElementById('localtime').value = new Date().toLocaleString();
-
-
-      form.reset();
-
-
-      setTimeout(() => {
-        alertBox.style.display = "none";
-      }, 3000);
-
-
-      try {
-        await fetch(form.action, {
-          method: form.method,
-          body: new FormData(form),
-          headers: { Accept: "application/json" }
-        });
-      } catch (err) {
-        console.log("Form submit error (ignored for UX)");
+  // Project cards animation
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        if (!intervalId) startLoop();
+      } else {
+        stopLoop();
       }
+    },
+    { threshold: 0.5 }
+  );
+
+  if (projectSection) {
+    observer.observe(projectSection);
+  }
+
+  function startLoop() {
+    runSequence();
+    intervalId = setInterval(runSequence, 10000);
+  }
+
+  function stopLoop() {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  function runSequence() {
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("hide");
+
+        setTimeout(() => {
+          card.classList.remove("hide");
+        }, 500);
+
+      }, index * 1000);
+    });
+  }
+
+  // Hamburger menu
+  function toggleMenu() {
+    document.querySelector(".nav").classList.toggle("active");
+  }
+
+  // Auto close menu on click
+  document.querySelectorAll(".nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      document.querySelector(".nav").classList.remove("active");
+    });
+  });
+
+  // Contact form submit
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const alertBox = document.getElementById("customAlert");
+
+    // local time
+    document.getElementById("localtime").value =
+      new Date().toLocaleString();
+
+    // popup instantly show
+    alertBox.style.display = "flex";
+
+    // hide popup after 2 sec
+    setTimeout(() => {
+      alertBox.style.display = "none";
+    }, 2000);
+
+    try {
+      await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      // reset after sending
+      form.reset();
+    } catch (err) {
+      console.log("Form submit error:", err);
     }
+  }
 
 
   </script>
