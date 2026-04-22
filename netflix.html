@@ -1,0 +1,525 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: black;
+            color: white;
+        }
+
+        /* ---------------- HERO SECTION ---------------- */
+        .hero {
+            height: 100vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("bg.jpg") center/cover no-repeat;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+        }
+
+        .logo {
+            font-size: 45px;
+            font-weight: 700;
+            color: red;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1px solid gray;
+        }
+
+        .btn-red {
+            background: red;
+            border: none;
+            color: white;
+        }
+
+        .hero-text {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        .email-box {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        input {
+            padding: 15px;
+            width: 300px;
+            border-radius: 4px;
+            background: transparent;
+            border: 1px solid gray;
+            color: white;
+        }
+
+        .in {
+
+
+            padding: 17px;
+            width: 550px;
+            border-radius: 4px;
+            background: transparent;
+            border: 1px solid gray;
+            color: white;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-large {
+            padding: 15px 25px;
+            background: red;
+            border: none;
+            font-size: 20px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .button1 {
+            padding: 15px 25px;
+            font-weight: 600;
+
+            background: red;
+            border: none;
+            font-size: 20px;
+            border-radius: 5px;
+            color: white
+        }
+
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        .trending {
+            display: flex;
+            gap: 40px;
+            overflow-x: auto;
+        }
+
+        .trend-card img {
+            width: 190px;
+            height: 220px;
+            border-radius: 8px;
+        }
+
+        .trend-card:hover {
+            transition: all 0.1s ease-in;
+            transform: scale(1.02);
+
+        }
+
+        .top {
+
+            display: flex;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-box {
+            background: linear-gradient(149deg, #192247 0%, #210e17 99%);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+
+        .feature-box h3 {
+            margin-bottom: 10px;
+        }
+
+        .gu {
+            display: grid;
+            gap: 10px;
+
+        }
+
+        .gul {
+
+
+            background-color: rgb(53, 53, 53);
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid #605f5f;
+            font-size: 23px;
+
+        }
+
+        .gul:hover {
+            background-color: rgb(68, 68, 68);
+
+
+
+        }
+
+        .r {
+            font-size: 25px;
+            margin-bottom: 20px;
+
+        }.cl2{
+
+
+            display: flex;
+justify-content: space-between;
+color: rgb(172, 172, 172);
+font-size: 15px;
+margin-top: 5%;
+
+        }
+.cl7{
+
+
+
+
+    display: flex;
+    gap:15px;
+    flex-direction: column;
+    text-decoration: underline;
+}.cl{
+color: rgb(172, 172, 172);
+margin-top: 5%;
+
+
+}.cl3,.cl5{
+
+display: flex;
+    gap:15px;
+    flex-direction: column;
+    text-decoration: underline
+
+
+
+}.l{
+
+margin-top:7%;
+    display: flex;
+    flex-direction: column;
+gap:30px;
+
+}.l1{
+color: rgb(172, 172, 172);
+font-size: 16px;
+
+}.l2{
+color: rgb(172, 172, 172);
+font-size: 13px;
+
+
+}.l .btn{
+
+
+    display:block;
+color: white;
+  background: transparent;  
+border-radius: 4px;
+padding: 10px 10px;
+border: 1px solid #706f6f;
+width: 80px;
+}
+                    @media(max-width:600px){
+
+            nav {
+                padding: 20px;}
+
+            .logo {
+                font-size: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 35px;
+            }
+        }@media(max-width:768px){
+
+.button1 {
+            padding: 10px 15px;
+            font-weight: 600;
+
+        
+            
+            font-size: 18px;
+            border-radius: 5px;
+        
+        }
+.in {
+
+
+            padding: 15px;
+            width: 350px;
+        
+        
+        }
+
+        
+        }
+@media(max-width:530px){
+
+.button1 {
+            padding: 10px 13px;
+            font-weight: 600;
+
+            
+            font-size: 17px;
+            border-radius: 5px;
+        
+        }
+.in {
+
+
+            padding: 13px;
+            width: 250px;
+        
+        
+        }.cl2{
+display: flex;
+
+flex-direction: column;
+        }
+
+        .top{
+
+justify-content: center;
+            flex-wrap: wrap;
+     
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero">
+        <nav>
+            <div class="logo">NETFLIX</div>
+
+            <div class="nav-buttons">
+                <button class="btn btn-outline">English</button>
+                <button class="btn btn-red">Sign In</button>
+            </div>
+        </nav>
+
+        <div class="hero-text">
+            <h1>Unlimited movies, TV <br>shows and more.</h1>
+            <p>Starts at ₹149. Cancel anytime.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <div class="email-box">
+                <input type="text" placeholder="Enter email">
+                <button class="btn-large">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section">
+        <h2>Trending Now</h2>
+        <div class="trending">
+            <div class="trend-card"><img src="dhu.jpg"></div>
+            <div class="trend-card"><img src="dew.jpg"></div>
+            <div class="trend-card"><img src="sai.jpg"></div>
+            <div class="trend-card"><img src="tere.jpg"></div>
+            <div class="trend-card"><img src="images.jpg"></div>
+
+
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2>More reasons to join</h2>
+
+        <div class="features">
+
+            <div class="feature-box">
+                <h3>Enjoy on your TV</h3>
+                <p>Watch on smart TVs, PlayStation, Xbox and more.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>Download your shows</h3>
+                <p>Save favourites easily and always have something to watch.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>Watch everywhere</h3>
+                <p>Stream on phone, tablet, laptop or TV.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>Create profiles for kids</h3>
+                <p>Kids can watch their favourite characters in a safe space.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="section">
+        <h3 class="r">Frequently Asked Questions
+        </h3>
+        <div class="gu">
+            <div class="gul">What is Netflix</div>
+            <div class="gul">How much does Netflix cost</div>
+            <div class="gul">Where can i Watch</div>
+            <div class="gul">How do I cancel</div>
+            <div class="gul">Is Netflix good for kids</div>
+
+        </div>
+
+
+    </div>
+
+    <section class="section">
+        <div class="button">
+            <p>Ready to watch? Enter your email to create or restart your membership.
+            </p>
+            <div class="top">
+                <input type="text" class="in" placeholder="Email address">
+                <button class="button1">Get started</button>
+            </div>
+        </div>
+        <div class="cl">
+
+            <p>Questions? Call 000-800-919-1743
+
+            </p>
+        </div>
+        <div class="cl2">
+            <div class="cl3">
+                <div class="cl7">
+                    <p>FAQ</p>
+                </div>
+                <p>Investor Relations
+                </p>
+                <p>Investor Relations
+                </p>
+                <p>Speed Test
+                </p>
+
+
+
+            </div>
+
+            <div class="cl7">
+                <p>Help Centre
+</p>
+            <p>Help Centre
+
+            </p>
+            <p>Cookie Preferences
+            </p>
+            <p>Cookie Preferences
+            </p>
+
+
+            </div>
+            <div class="cl5">
+                <div class="cl7">
+                    <p>FAQ</p>
+                </div>
+                <p>Investor Relations
+                </p>
+                <p>Investor Relations
+                </p>
+                <p>Speed Test
+                </p>
+
+
+
+            </div>
+
+            <div class="cl7">
+                <p>Help Centre
+</p>
+            <p>Help Centre
+
+            </p>
+            <p>Cookie Preferences
+            </p>
+            <p>Cookie Preferences
+            </p>
+
+
+            </div>
+
+
+        </div>
+        </div>
+
+
+<div class="l">
+
+
+    <div class="btn">English</div>
+
+    <div class="l1">Netflix India
+
+</div>
+
+<div class="l2">This page is protected by Google reCAPTCHA to ensure you're not a bot.</div>
+</div>
+
+
+    </section>
+</body>
+
+</html>
